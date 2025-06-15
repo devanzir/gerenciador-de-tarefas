@@ -26,8 +26,8 @@ Como Executar o Projeto:
 
 *  Clonar o repositório,
 BASH
-- git clone https://github.com/seu-usuario/seu-repositorio.git
-- cd seu-repositorio
+- git clone (https://github.com/devanzir/gerenciador-de-tarefas/edit/main)
+- cd gerenciador-de-tarefas
 
 Configurar o Backend (LARAVEL):
 
