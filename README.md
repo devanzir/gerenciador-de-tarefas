@@ -10,11 +10,11 @@ Sistema simples para gerenciar tarefas com:
 
 Funcionalidades do projeto:
 
-- cadastar novas tarefas 
+- cadastar nova tarefas 
 - Listar todas as tarefas
 - Visualizar detalher de uma tarefa 
 - Atualizar uma tarefa 
-- Marcar como concluída 
+- Marcar como concluida 
 - Excluir tarefas 
 
 Tecnologias Utilizadas:
@@ -24,12 +24,12 @@ Tecnologias Utilizadas:
 - Frontend: React, Vite, CSS
 - API: JSON RESTful
 
-Como executar o projeto:
+*  Clonar o repositório,
+BASH
+- git clone (https://github.com/devanzir/gerenciador-de-tarefas/edit/main)
+- cd gerenciador-de-tarefas
 
-1. Clonar o repositório:
--bash
--git clone https://github.com/devanzir/gerenciador-de-tarefas.git
--cd gerenciador-de-tarefas
+Configurar o Backend (LARAVEL):
 
 2. Configurar o Backend (Laravel):
 - bash
@@ -64,13 +64,12 @@ Acesse: http://localhost:8000/api/tasks
 
 Observações Técnicas:
 
-* Versão do Laravel: Foi utilizada a versão 9.x, compatível com PHP 8.0.
+* Versão do Laravel : Foi utilizada a versão 9.x, compatível com PHP 8.0.
 
-* CORS: O pacote fruitcake/laravel-cors foi instalado para permitir requisições do frontend React.
+* CORS : O pacote fruitcake/laravel-cors foi instalado para permitir requi* sições do frontend React.
 
 * API Fetch: O frontend consome a API utilizando fetch, sem bibliotecas externas.
-
-* Estilo: Estilização simples com CSS puro para facilitar a manutenção.
+* Estilo : Estilização simples com CSS puro para facilitar a manutenção.
 
 Testes:
 
