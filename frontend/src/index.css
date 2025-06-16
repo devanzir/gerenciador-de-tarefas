@@ -1,0 +1,81 @@
+
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #4c7297;
+  color: #265380;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.task-description {
+  color: #6c757d;
+  white-space: normal; 
+  word-break: break-word; 
+}
+
+.task-status {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+input[type="text"] {
+  width: 100%; 
+  margin-right: 10px;
+}
+
+
+input[placeholder="Descrição (opcional)"] {
+  width: 300px; 
+}

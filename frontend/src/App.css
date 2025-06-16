@@ -1,0 +1,174 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #673ab7; /* Fundo roxo vibrante */
+  color: white;
+  overflow-x: hidden;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: rgba(255, 255, 255, 0.571);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.498);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn-save {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: rgba(223, 212, 212, 0.425);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-content input[type="checkbox"] {
+  accent-color: #2196f3;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #c0c0c0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover svg {
+  fill: #ffeb3b;
+}
+
+.delete-btn:hover svg {
+  fill: #f44336;
+}
+
+.edit-btn svg,
+.delete-btn svg {
+  width: 24px; 
+  height: 24px;
+  fill: #ffffff;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .task-form input {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .task-form button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .task-card {
+    padding: 10px;
+  }
+
+  .task-content span {
+    font-size: 1rem;
+  }
+}
