@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('tasks', TaskController::class);
+
 

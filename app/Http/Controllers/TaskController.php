@@ -3,48 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreTaskRequest;
+use App\Http\Requests\UpdateTaskRequest;
+use App\Http\Resources\TaskResource;
 
 class TaskController extends Controller
 {
     public function index()
-    
     {
-        return Task::all();
+        return TaskResource::collection(Task::all());
     }
 
-    public function store(Request $request)
-    
+    public function store(StoreTaskRequest $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'status' => 'in:pendente,concluída'
-        ]);
-
-        return Task::create($validated);
+        $task = Task::create($request->validated());
+        return new TaskResource($task);
     }
 
-    public function show(Task $task)
-    
+    public function show($id)
     {
-        return $task;
-    }
-    
-     public function update(Request $request, Task $task)
-    {
-        $validated = $request->validate([
-            'title' => 'sometimes|required|string|max:255',
-            'description' => 'nullable|string',
-            'status' => 'in:pendente,concluída'
-        ]);
+        $task = Task::find($id);
 
-        $task->update($validated);
-        return $task;
+        if (!$task) {
+            return response()->json(['message' => 'Tarefa não encontrada.'], 404);
+        }
+
+        return new TaskResource($task);
     }
 
-    public function destroy(Task $task)
+    public function update(UpdateTaskRequest $request, $id)
     {
+        $task = Task::find($id);
+
+        if (!$task) {
+            return response()->json(['message' => 'Tarefa não encontrada.'], 404);
+        }
+
+        $task->update($request->validated());
+        return new TaskResource($task);
+    }
+
+    public function destroy($id)
+    {
+        $task = Task::find($id);
+
+        if (!$task) {
+            return response()->json(['message' => 'Tarefa não encontrada.'], 404);
+        }
+
         $task->delete();
         return response()->noContent();
     }

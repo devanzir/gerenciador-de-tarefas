@@ -10,12 +10,12 @@ Sistema simples para gerenciar tarefas com:
 
 Funcionalidades do projeto:
 
-1. Cadastrar nova tarefa
-2. Listar todas as tarefas
-3. Visualizar detalhes de uma tarefa
-4. Atualizar uma tarefa
-5. Marcar como concluída
-6. Excluir tarefas
+- cadastar novas tarefas 
+- Listar todas as tarefas
+- Visualizar detalher de uma tarefa 
+- Atualizar uma tarefa 
+- Marcar como concluída 
+- Excluir tarefas 
 
 Tecnologias Utilizadas:
 
@@ -64,25 +64,14 @@ Acesse: http://localhost:8000/api/tasks
 
 Observações Técnicas:
 
-- Versão do Laravel: Utilizada a versão 9.x, compatível com PHP 8.0.
-  
-- CORS: O pacote fruitcake/laravel-cors foi instalado para permitir requisições do frontend React.
-  
-- API Fetch: O frontend consome a API utilizando fetch, sem bibliotecas externas.
-  
-- Estilo: Estilização simples com CSS puro para facilitar a manutenção.
+* Versão do Laravel: Foi utilizada a versão 9.x, compatível com PHP 8.0.
+
+* CORS: O pacote fruitcake/laravel-cors foi instalado para permitir requisições do frontend React.
+
+* API Fetch: O frontend consome a API utilizando fetch, sem bibliotecas externas.
+
+* Estilo: Estilização simples com CSS puro para facilitar a manutenção.
 
 Testes:
 
-- Postman — para testar os endpoints da API.
-
-
-PROJETO:
-
-BACKEND:
-
-![alt text](image.png)
-
-FRONTEND:
-
-![alt text](image-1.png)
+* Postman — para testar os endpoints da API.
